@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\ProductModel;
+use App\CategoryModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -11,7 +13,9 @@ class AdminController extends Controller
 {
     public function index(){
         $menu_active=1;
-        return view('backEnd.index',compact('menu_active'));
+        $products=ProductModel::all()->count();
+        $categories=CategoryModel::all()->count();
+        return view('backEnd.index',compact('menu_active', 'products', 'categories'));
     }
     public function settings(){
         $menu_active=0;

@@ -4,7 +4,7 @@
 	<div class="panel panel--banner">
 		<div class="page-title page-title--rent dark">
 			<div class="banner-container">
-				
+				<h1>Anunturi</h1>
 			</div>
 		</div>
 	</div>
@@ -14,7 +14,6 @@
 		<main id="main">
 			<section class="section section--properties-listing">
 				<div class="wrap">
-					<h2 class="title text-center">Anunturi</h2>
 					<form action="{{ route('anunturi') }}" method="get" class=""> 
 						{{ csrf_field() }}
 						<!-- <input type="hidden" name="_token" value="{{csrf_token()}}">  -->

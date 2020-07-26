@@ -11,8 +11,8 @@
                 <nav class="nav nav--footer">    
                     <ul class="level1 grid">
                         <li class="grid_col grid_col--1-of-1"><a href="{{ url('/') }}">Acasa</a></li>
-                        <li class="grid_col grid_col--1-of-1"><a href="{{ url('inchirieri') }}">Inchirieri</a></li>
-                        <li class="grid_col grid_col--1-of-1"><a href="{{ url('vanzari') }}">Vanzari</a></li>
+                        <li class="grid_col grid_col--1-of-1"><a href="{{ url('anunturi?type=rent') }}">Inchirieri</a></li>
+                        <li class="grid_col grid_col--1-of-1"><a href="{{ url('anunturi?type=sale') }}">Vanzari</a></li>
                         <li class="grid_col grid_col--1-of-1"><a href="{{ url('contact') }}">Contact</a></li>
                     </ul>
                 </nav>
@@ -41,9 +41,9 @@
         <div class="grid">
             <div class="footer-links grid_col grid_col--2-of-3">
                 <ul>
-                    <li><a href="">Politica de Confidentialitate</a></li>
-                    <li><a href="">Politica de Cookies</a></li>
-                    <li><a href="">Termeni si Conditii</a></li>
+                    <li><a href="{{ url('politica-de-confidentialitate') }}">Politica de confidentialitate</a></li>
+                    <li><a href="{{ url('politica-de-cookies') }}">Politica de cookies</a></li>
+                    <li><a href="{{ url('termeni-si-conditii') }}">Termeni si conditii</a></li>
                 </ul>
             </div>
             <div class="footer-copyright grid_col grid_col--1-of-3 text-right">
@@ -51,4 +51,8 @@
             </div>
         </div>    
     </div>
+</div>
+<div class="panel panel--cookies dark" id="cookies">
+    <p>Folosim cookie-uri pentru a oferi si imbunatati serviciile noastre. Prin utilizarea site-ului nostru, va dati acordul pentru <a class="cookies-more" href="{{ url('politica-de-cookies') }}">politica de cookie-uri</a>.</p>
+    <a id="closeCookie" class="button button--accept" href="#">Accepta</a>
 </div>

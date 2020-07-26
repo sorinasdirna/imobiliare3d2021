@@ -7,29 +7,20 @@
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| contains the "web" middleware group. 
 |
 */
 
 Route::get('/', 'PagesController@index');
 Route::get('/anunturi', 'PagesController@anunturi')->name('anunturi');
 
-//Route::get('/search', 'PagesController@search')->name('search');
-
-//Route::get('/anunturi', 'PagesController@advancedSearch')->name('advancedSearch');
-
 Route::get('/detalii/{id}', 'PagesController@detalii');
 Route::get('/categorii/{id}', 'PagesController@categorii');
 Route::get('/contact', 'PagesController@contact');
-
-
-
-/* FrontEnd Location */
-//Route::get('/list-products','IndexController@shop');
-//Route::get('/cat/{id}','IndexController@listByCat')->name('cats');
-//Route::get('/product-detail/{id}','IndexController@detialpro');
-//Route::get('/product-detail/{id}','IndexController@detialpro');
-
+Route::get('/despre', 'PagesController@despre');
+Route::get('/politica-de-confidentialitate', 'PagesController@politicaDeConfidentialitate');
+Route::get('/politica-de-cookies', 'PagesController@politicaDeCookies');
+Route::get('/termeni-si-conditii', 'PagesController@termeniSiConditii');
 
 /* Admin Location */
 Auth::routes(['register'=>false]);

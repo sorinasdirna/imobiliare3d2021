@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\CategoryModel;
 use App\ImageGalleryModel;
 use App\ProductModel;
+use App\Mail\ContactFormMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
@@ -62,7 +64,27 @@ class PagesController extends Controller
         $menu_active=3;
         return view('contact',compact('menu_active'));
     }
+
+    public function despre() {
+        $menu_active=4;
+        return view('despre',compact('menu_active'));
+    }
     
+    public function politicaDeConfidentialitate() {
+        $menu_active=0;
+        return view('politica-de-confidentialitate',compact('menu_active'));
+    }
+
+    public function politicaDeCookies() {
+        $menu_active=0;
+        return view('politica-de-cookies',compact('menu_active'));
+    }
+
+    public function termeniSiConditii() {
+        $menu_active=0;
+        return view('termeni-si-conditii',compact('menu_active'));
+    }
+
     public function categorii($id) {
         $menu_active=0;
         $products=ProductModel::where('categories_id',$id)->get();

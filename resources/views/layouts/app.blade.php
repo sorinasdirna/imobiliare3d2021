@@ -4,8 +4,7 @@
 	<meta charset="UTF-8">
 	<title>{{config('app.name', 'Imobiliare 3D')}}</title>
 	<!-- favicon -->
-	<link rel="icon" type="image/png" sizes="18x18" href="/favicon.png"> 
-	<link rel="icon" type="image/svg" sizes="18x18" href="/favicon.svg"> 
+	<link rel="icon" type="image/svg" sizes="18x18" href="/favicon.ico"> 
 	<!-- font awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- slick slider -->
@@ -104,6 +103,36 @@
 
 	   	    
 		});
+
+		// cookies gdpr
+		function setCookie(name,value,days) {
+		    var expires = "";
+		    if (days) {
+		        var date = new Date();
+		        date.setTime(date.getTime() + (days*24*60*60*1000));
+		        expires = "; expires=" + date.toUTCString();
+		    }
+		    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+		}
+		function getCookie(name) {
+		    var nameEQ = name + "=";
+		    var ca = document.cookie.split(';');
+		    for(var i=0;i < ca.length;i++) {
+		        var c = ca[i];
+		        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+		    }
+		    return null;
+		}
+		
+		document.getElementById("closeCookie").addEventListener("click", function(){
+			setCookie('imobiliare3d','GDPRaccepted',7);
+		});
+		var cookie = getCookie('imobiliare3d');
+		if (cookie) {
+		    document.getElementById('cookies').classList.add('js--hidden');
+		}
+
 	</script>
 
 	@yield('scripts')

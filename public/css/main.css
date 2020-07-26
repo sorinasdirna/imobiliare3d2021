@@ -210,6 +210,7 @@ h6 {
 p {
     margin: 20px 0;
     font-size: 18px;
+    line-height: 1.6;
 }
 
 a {
@@ -279,7 +280,7 @@ input::-ms-clear {
     -moz-appearance: none;
     padding: 13px 20px;
     background: transparent;
-    border: 1px solid #333;
+    border: 1px solid #888a85;
     color: #333;
     line-height: 1;
     border-radius: 7px;
@@ -294,9 +295,7 @@ input::-ms-clear {
 .textarea:focus,
 .dropdown:focus,
 .upload:focus {
-    outline-offset: -2px;
     outline: -webkit-focus-ring-color auto 1px;
-    outline-color: #0197fd;
 }
 
 .submit,
@@ -797,6 +796,10 @@ input::-ms-clear {
     max-width: 1280px;
     padding: 0 20px;
     margin: 0 auto;
+}
+
+.js--hidden {
+    display: none;
 }
 
 /*** START MENU ***/
@@ -1838,4 +1841,67 @@ input::-ms-clear {
 
 .project-details_back--bottom {
     margin-top: 20px;
+}
+
+/*contact page*/
+
+.required {
+    color: #F80000;
+    font-weight: normal;
+}
+
+.section--contact .form-info  {
+    margin-bottom: 50px;
+}
+
+.section--contact .form-input  {
+    margin-bottom: 20px;
+}
+
+.section--contact .form-input label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #888a85;
+}
+
+.section--contact .input {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* cookies gdpr */
+
+.panel--cookies {
+    background: #1D293E;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.panel--cookies {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel--cookies p {
+    font-size: 12px;
+    line-height: normal;
+    margin: 0 20px 0 0;
+}
+
+.panel--cookies a:not(.button) {
+    text-decoration: underline;
+}
+
+.panel--cookies .button {
+    min-width: auto;
+    padding: 10px;
+    height: auto;
 }
