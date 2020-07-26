@@ -1,53 +1,48 @@
 @extends('layouts.app')
 
 @section('banner')
-	<div class="panel panel--banner">
+	<div class="panel panel--banner dark">
 		<div class="slider slider--hero">
 			<div class="slider_image" style="background-image: url({{ asset('img/slider/slider3.jpg') }})"></div>
 			<div class="slider_image" style="background-image: url({{ asset('img/slider/slider2.jpg') }})"></div>
 			<div class="slider_image" style="background-image: url({{ asset('img/slider/slider1.jpg') }})"></div>
 		</div>
 		<div class="banner-container">
-			<div class="banner-text text-center dark">
+			<div class="banner-text text-center">
 				<h1>Gaseste Casa Visurilor Tale</h1>
 				<p>La cele mai mici preturi</p>
 			</div>
 			<div class="search search--home">
 				<div class="search-form">
-					<form action="" method="" class="">  
+					<form action="{{ route('anunturi') }}" method="get" class=""> 
+						{{ csrf_field() }}
+						<!-- <input type="hidden" name="_token" value="{{csrf_token()}}">  -->
 						<div class="form-group">
 							<div class="form-input form-input--location">           
 								<label class="form-label sr-only">Locatie</label>
-								<input placeholder="Adresa sau zona"  type="text" name="" class="input">
+								<input placeholder="Locatie"  type="text" name="address" class="input">
 							</div>
 							<div class="form-input form-input--category"> 
 								<label class="form-label sr-only">Categorie</label>                              
-								<select name="" class="dropdown">
-									<option value="" selected="selected">Apartamente</option>
-									<option value="">Case / Vile</option>
-									<option value="">Ter. construcţii</option>
-									<option value="">Ter. agricole</option>
-									<option value="">Birouri</option>
-									<option value="">Spaţii comerciale</option>
-									<option value="">Spaţii industriale</option>
-									<option value="">Ter. investiţii</option>
-									<option value="">Hoteluri/pensiuni</option>
-									<option value="">Prop. speciale</option>
+								<select name="category" class="dropdown">
+									@foreach($categories as $category)
+									<option value="{{$category->id}}">{{$category->name}}</option>
+									@endforeach
 								</select>
 							</div>
 							<div class="form-input form-input--type">    
 								<label class="form-label sr-only">Tip</label>                              
-								<select name="" class="dropdown">
-									<option value="" selected="selected">De vânzare</option>
-									<option value="">De închiriat</option>
+								<select name="type" class="dropdown">
+									<option value="sale" selected="selected">De vânzare</option>
+									<option value="rent">De închiriat</option>
 								</select>                                    
 							</div>
 							<div class="form-input form-input--submit">  
 								<input type="submit" class="button button--search" value="Caută">
 							</div>    
 						</div>    
-					</div>
-				</form>
+					</form>
+				</div>
 			</div>
 		</div>
 		<div id="skip" class="banner-skip">
@@ -66,22 +61,22 @@
 						<div class="slider-item">
 							<div class="item">
 								<img src="{{ asset('img/svg/value1.svg') }}" alt="icon 1">
-								<h4>Lorem Ipsum</h4>
-								<p>Lorem ipsum dolor sit amet</p>
+								<h4>Profesionalism</h4>
+								<p>Oferim cele mai inalte standarde etice, respectam angajamentele si promisiunile noastre.</p>
 							</div>
 						</div>
 						<div class="slider-item">
 							<div class="item">
 								<img src="{{ asset('img/svg/value1.svg') }}" alt="icon 1">
-								<h4>Lorem Ipsum</h4>
-								<p>Lorem ipsum dolor sit amet</p>
+								<h4>Calitate</h4>
+								<p>Ne propunem sa depasim asteptarile in tot ceea ce facem.</p>
 							</div>
 						</div>
 						<div class="slider-item">
 							<div class="item">
 								<img src="{{ asset('img/svg/value1.svg') }}" alt="icon 1">
-								<h4>Lorem Ipsum</h4>
-								<p>Lorem ipsum dolor sit amet</p>
+								<h4>Integritate</h4>
+								<p>Ne concentram pe o comunicare onesta, oferim oportunitati si stabilitate pe termen lung in care increderea este primara.</p>
 							</div>
 						</div>
 					</div>
@@ -154,7 +149,7 @@
 					<div class="wrap">
 						<h2 class="title">Despre noi</h2>
 						<p>Anim et cupidatat in velit occaecat aute quis quis in pariatur laborum quis ut consectetur.</p>
-						<a class="button button--video" href="{{ url('contact') }}">Contacteaza-ne!</a>
+						<a class="button button--dark" href="{{ url('contact') }}">Contacteaza-ne</a>
 					</div>
 				</div>
 			</section>

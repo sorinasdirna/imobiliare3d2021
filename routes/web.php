@@ -12,7 +12,12 @@
 */
 
 Route::get('/', 'PagesController@index');
-Route::get('/anunturi', 'PagesController@anunturi');
+Route::get('/anunturi', 'PagesController@anunturi')->name('anunturi');
+
+//Route::get('/search', 'PagesController@search')->name('search');
+
+//Route::get('/anunturi', 'PagesController@advancedSearch')->name('advancedSearch');
+
 Route::get('/detalii/{id}', 'PagesController@detalii');
 Route::get('/categorii/{id}', 'PagesController@categorii');
 Route::get('/contact', 'PagesController@contact');
@@ -20,9 +25,11 @@ Route::get('/contact', 'PagesController@contact');
 
 
 /* FrontEnd Location */
-Route::get('/list-products','IndexController@shop');
-Route::get('/cat/{id}','IndexController@listByCat')->name('cats');
-Route::get('/product-detail/{id}','IndexController@detialpro');
+//Route::get('/list-products','IndexController@shop');
+//Route::get('/cat/{id}','IndexController@listByCat')->name('cats');
+//Route::get('/product-detail/{id}','IndexController@detialpro');
+//Route::get('/product-detail/{id}','IndexController@detialpro');
+
 
 /* Admin Location */
 Auth::routes(['register'=>false]);

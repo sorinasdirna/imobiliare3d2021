@@ -3,7 +3,7 @@
         <div class="grid">
             <div class="footer-logo grid_col grid_col--1-of-4">
                 <a href="{{ url('/') }}">
-                    <img src="{{ asset('img/logo2.png') }}" alt="Imobiliare 3D Logo">
+                    <img src="{{ asset('img/logo.png') }}" alt="Imobiliare 3D Logo">
                 </a>
             </div>
             <div class="footer-nav grid_col grid_col--1-of-4">
@@ -20,6 +20,7 @@
             <div class="footer-contact grid_col grid_col--1-of-4">
                 <h4>Contact</h4>
                 <ul>
+                    <li><i class="fa fa-map-marker"></i> Adresa</li>
                     <li><a href="tel:0000-0000-000"><i class="fa fa-phone"></i> 0000 0000 000</a></li>
                     <li><a href="mailto:test@test.com"><i class="fa fa-envelope"></i> test@test.com</a></li>
                 </ul>

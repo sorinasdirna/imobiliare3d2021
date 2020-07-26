@@ -65,7 +65,7 @@ body {
     font-size: 16px;
     font-size: 1.6rem;
     font-weight: normal;
-    line-height: 1;
+    line-height: 1.2;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: none;
@@ -76,10 +76,12 @@ table {
     border-spacing: 0;
 }
 
+b,
 strong {
     font-weight: 700;
 }
 
+i,
 em {
     font-style: italic;
 }
@@ -279,11 +281,13 @@ input::-ms-clear {
     background: transparent;
     border: 1px solid #333;
     color: #333;
+    line-height: 1;
     border-radius: 7px;
     font-family: "Nunito",Arial, sans-serif;
     font-size: 14px;
     font-size: 1.4rem;
     font-weight: 500;
+    height: 42px;
 }
 
 .input:focus,
@@ -328,6 +332,14 @@ input::-ms-clear {
     text-align: center;
     position: relative;
     font-weight: 700;
+    line-height: 1;
+}
+
+.button:hover,
+.button:focus {
+    color: #fff;
+    background: #0197fd;
+    border-color: #0197fd;
 }
 
 .button--dark {
@@ -336,11 +348,14 @@ input::-ms-clear {
     border-color: #fff;
 }
 
-.button:hover,
-.button:focus {
-    color: #fff;
-    background: #0197fd;
-    border-color: #0197fd;
+.button--grey {
+    background: #1D293E;
+    border-color: #1D293E;
+}
+
+.button--grey:hover {
+    background: #888a85;
+    border-color: #888a85;
 }
 
 .button:after {
@@ -788,17 +803,33 @@ input::-ms-clear {
 
 .panel--header {
     padding: 20px 50px;
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;
     z-index: 99;
+    background: #fff;
+    transition: 250ms;
     background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+}
+
+.panel--header.js--sticky {
+    box-shadow: 0px 1px 7px -4px #000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: #fff;
+    background: linear-gradient(0deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 100%);
     transition: 250ms;
 }
 
 .nav-logo img {
+    transition: 250ms;
     max-width: 120px;
+}
+
+.js--sticky .nav-logo img {
+    transition: 250ms;
+    max-width: 90px;
 }
 
 .nav-toggle {
@@ -811,6 +842,10 @@ input::-ms-clear {
     font-weight: 500;
     position: relative;
     padding-bottom: 15px;
+}
+
+.js--sticky .nav-collapse ul li a {
+    color: #000;
 }
 
 .nav-collapse ul li a:before {
@@ -1106,8 +1141,8 @@ input::-ms-clear {
     left: 0;
     background: transparent;
     z-index: 1;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 15px;
     transition: all .3s ease-in-out;
     cursor: pointer;
     border-top-right-radius: 7px;
@@ -1115,7 +1150,7 @@ input::-ms-clear {
 }
 
 .slick-arrow:hover {
-    background: rgba(255, 255, 255, 0.7); 
+    background: rgba(255, 255, 255, 0.4); 
 }
 
 .slick-arrow.slick-next {
@@ -1128,12 +1163,24 @@ input::-ms-clear {
 
 .slick-arrow:before {
     content: "\f053";
-    font-size: 25px;
-    color: #333;
+    font-size: 18px;
+    color: rgba(1, 151, 253, .3);
+}
+
+.dark .slick-arrow:before {
+    color: rgba(255, 255, 255, .3);
 }
 
 .slick-arrow.slick-next:before {
     content: "\f054";
+}
+
+.slick-arrow:hover:before {
+    color: rgba(1, 151, 253, 1);
+}
+
+.dark .slick-arrow:hover:before {
+    color: rgba(255, 255, 255, 1);
 }
 
 .slider_image {
@@ -1291,6 +1338,7 @@ input::-ms-clear {
 
 .section--overview p {
     margin: 0;
+    padding: 5px 30px;
 }
 
 .section--properties {
@@ -1513,6 +1561,56 @@ input::-ms-clear {
     cursor: default;
 }
 
+/*categories page*/
+
+.categories-accordion .accordion {
+    border: 1px solid #f2f2f2;
+    padding: 20px;
+    border-radius: 7px;
+}
+
+.categories-accordion .accordion_item ~ .accordion_item {
+    margin-top: 20px;
+}   
+
+.categories-accordion a {
+    color: #000;
+    font-weight: 600;
+}
+
+.categories-accordion a:hover {
+    color: #0197fd;
+}
+
+.accordion_toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categories-accordion .accordion_toggle .toggle {
+    cursor: pointer;
+    color: #0197fd;
+}
+
+.categories-accordion .accordion_toggle .toggle:hover {
+    color: #0197fd;
+}
+
+.categories-accordion .js--active .accordion_toggle .toggle i:before {
+    content: "\f068";
+}
+
+.categories-accordion .accordion_collapse {
+    display: none;
+    margin: 20px;
+}
+
+.categories-accordion .js--active .accordion_collapse {
+    display: block;
+}
+
+
 /*Inchirieri/vanzari Page*/
 
 .page-title {
@@ -1624,4 +1722,120 @@ input::-ms-clear {
 .section--properties-listing .property_location {
     color: #888a85;
     margin-bottom: 10px;
+}
+
+.section--properties-listing .form-group {
+    margin-bottom: 30px;
+}
+
+.section--properties-listing .form-input {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/*Details page*/
+
+.section--details .wrap {
+    position: relative;
+}
+
+.section--details .project-details_back--top {
+    position: absolute;
+    top: -40px;
+    left: 20px;
+}
+
+.section--details .project-details_back--bottom {
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+}
+
+.product-details_name {
+    font-size: 24px;
+    font-size: 2.4rem;
+    margin-bottom: 5px;
+    color: #000;
+    font-weight: bold;
+}
+
+.product-details_type,
+.product-details_category {
+    background: #0197fd;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.product-details_type {
+    background: #0167c6;
+}
+
+.product-details_price {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.product-details_address {
+    margin-bottom: 10px;
+}
+
+.product-details_table-wrap {
+    border: 1px solid #f2f2f2;
+    margin: 20px 0;
+    border-radius: 7px;
+}
+
+.product-details_table {
+    width: 100%;
+    margin: 0;
+}
+
+.product-details_table tr ~ tr {
+    border-top: 1px solid #f2f2f2;
+}
+
+.product-details_table tr:hover {
+    background: rgba(0, 0, 0, .01);
+}
+
+.product-details_table td {
+    padding: 10px;
+}
+
+.product-details_images .slick-slide {
+    outline: none;
+}
+
+.product-details_images .slider-nav img {
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.product-details_images {
+    background: #f2f2f2;
+    padding: 5px;
+    margin: 20px 0;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.product-details_images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    padding: 5px;
+}
+
+.project-details_back--top {
+    margin-bottom: 20px;
+} 
+
+.project-details_back--bottom {
+    margin-top: 20px;
 }

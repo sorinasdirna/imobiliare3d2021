@@ -1,9 +1,9 @@
 <!--Header-part-->
 <div id="header">
     <a href="{{ url('/') }}" target="_blank">
-        <img src="{{ asset('img/logo2.png') }}" alt="Logo">
+        <img src="{{ asset('img/logo.png') }}" alt="Logo">
     </a>
-    <h1>Imobiliare 3D Admin</h1>
+    <h1>Administrator</h1>
 </div>
 <!--close-Header-part-->
 <!--top-Header-menu-->
@@ -13,8 +13,8 @@
         <li class="">
             <a class="dropdown-item" href="{{ route('logout') }}"
                onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                <i class="icon icon-share-alt"></i>{{ __('Logout') }}
+                document.getElementById('logout-form').submit();">
+                <i class="icon icon-share-alt"></i>Deconectare
             </a>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

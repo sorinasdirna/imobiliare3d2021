@@ -1094,6 +1094,34 @@ div.dataTables_wrapper .ui-widget-header {
 }
 .modal {
 	z-index: 99999 !important;
+	position: fixed;
+    top: 10%;
+    left: 10%;
+    z-index: 1050;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,0.3);
+    *border: 1px solid #999;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+    box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    right: 10%;
+    bottom: 10%;
+    overflow: auto;
+}
+.modal-body {
+	max-height: 100%;
+	overflow: initial; 
 }
 .modal-backdrop {
 	z-index: 999 !important;
@@ -1127,9 +1155,18 @@ form {
 	margin-bottom: 0;
 }
 .form-horizontal .control-group {
-	border-top: 1px solid #ffffff;
-	border-bottom: 1px solid #eeeeee;
+	border-bottom: 1px solid #fff;
 	margin-bottom: 0;
+}
+.form-horizontal .control-wrap-outer {
+    color: #000;
+    margin: 0;
+    padding: 10px;
+    background: #fff;
+}
+.form-horizontal .control-wrap-inner {
+    background: #F9F9F9;
+    padding: 10px;
 }
 .form-horizontal .control-group:last-child {
 	border-bottom: 0;
@@ -1137,6 +1174,7 @@ form {
 .form-horizontal .control-label {
 	padding-top: 15px;
 	width: 180px;
+	cursor: auto;
 }
 .form-horizontal .controls {
 	margin-left: 200px;

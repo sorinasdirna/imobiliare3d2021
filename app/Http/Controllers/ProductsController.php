@@ -56,8 +56,12 @@ class ProductsController extends Controller
         $this->validate($request,[
             'p_name'=>'required|min:3',
             'p_code'=>'required|max:255|unique:products,p_code',
-            'image'=>'image|mimes:png,jpg,jpeg|max:1000',
+            'image'=>'image|mimes:png,jpg,jpeg|max:10000',
         ]);
+
+        $waterMarkUrl = public_path('img/logo.png');
+
+
         $formInput=$request->all();
         if(empty($formInput['p_status'])){
             $formInput['p_status']=0;
@@ -123,7 +127,7 @@ class ProductsController extends Controller
         $this->validate($request,[
             'p_name'=>'required|min:3',
             'p_code'=>'required|max:255|unique:products,p_code,'.$update_product->id,
-            'image'=>'image|mimes:png,jpg,jpeg|max:1000',
+            'image'=>'image|mimes:png,jpg,jpeg|max:10000',
         ]);
         $formInput=$request->all();
         if(empty($formInput['p_status'])){
@@ -165,13 +169,9 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         $delete=ProductModel::findOrFail($id);
-        $image_large=public_path().'/products/large/'.$delete->image;
-        $image_medium=public_path().'/products/medium/'.$delete->image;
-        $image_small=public_path().'/products/small/'.$delete->image;
+        $image_large=public_path().'/products/'.$delete->image;
         if($delete->delete()){
             unlink($image_large);
-            unlink($image_medium);
-            unlink($image_small);
         }
         return redirect()->route('product.index')->with('message','Anuntul a fost sters cu succes');
     }

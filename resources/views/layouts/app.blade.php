@@ -11,11 +11,18 @@
 	<!-- slick slider -->
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<!-- fonts -->
-	<!--<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">-->
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 	<!-- main css -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
+
+	<!-- for gallery on details  -->
+	<!-- Add mousewheel plugin (this is optional) -->
+	<!-- Add fancyBox main JS and CSS files -->
+	<link rel="stylesheet" type="text/css" href="{{ asset('fancybox/source/jquery.fancybox.css?v=2.1.5') }}" media="screen" />
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="{{ asset('fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5') }}" />
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="{{ asset('fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7') }}" />
 </head>
 <body>
 	
@@ -32,6 +39,12 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<!-- slick slider -->
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<!-- for gallery on details -->
+	<script type="text/javascript" src="{{ asset('fancybox/lib/jquery.mousewheel.pack.js?v=3.1.3') }}"></script>
+	<script type="text/javascript" src="{{ asset('fancybox/source/jquery.fancybox.pack.js?v=2.1.5') }}"></script>
+	<script type="text/javascript" src="{{ asset('fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5') }}"></script>
+	<script type="text/javascript" src="{{ asset('fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7') }}"></script>
+
 	<script type="text/javascript">
 		$(document).ready(function(){
 			// toggle menu 
@@ -83,7 +96,16 @@
 					}
 				}]
 			});
+
+			$('.accordion_item .toggle').on('click', function(e) {
+	            e.preventDefault();
+	            $(this).closest('.accordion_item').toggleClass('js--active');
+	   	    });
+
+	   	    
 		});
 	</script>
+
+	@yield('scripts')
 </body>
 </html>

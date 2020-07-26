@@ -25,13 +25,14 @@ $(document).ready(function(){
 			url:'/admin/check_category_name',
 			data:{name:category_name},
 			success:function (resp) {
-				/*if(resp=="false"){
-					$("#chCategory_name").html("<span style='color: green;'>Categoria este OK</span>");
-				}else if(resp=="true"){
-                    $("#chCategory_name").html("<span style='color: red;'>Categorie deja existenta.</span>");
-				}*/
-				if(resp=="true"){
-                    $("#chCategory_name").html("<span style='color: red;'>Categorie deja existenta.</span>");
+				if(category_name !== '') {
+					if(resp=="false"){
+						$("#chCategory_name").html("<span style='color: green;'>Categoria este OK</span>");
+					}else if(resp=="true"){
+	                    $("#chCategory_name").html("<span style='color: red;'>Categorie deja existenta.</span>");
+					}
+				} else {
+	                    $("#chCategory_name").html("");
 				}
             },error:function () {
 				alert("Error Ajax");
@@ -46,8 +47,14 @@ $(document).ready(function(){
 			url:'/admin/check_product_code',
 			data:{p_code:product_code},
 			success:function (response) {
-				if(response=="true"){
-                    $("#chProduct_code").html("<span style='color: red;'>Cod intern deja existent.</span>");
+				if(product_code !== '') {
+					if(response=="false"){
+	                    $("#chProduct_code").html("<span style='color: green;'>Codul intern este OK.</span>");
+					} else {
+	                    $("#chProduct_code").html("<span style='color: red;'>Cod intern deja existent.</span>");
+					}
+				} else {
+					$("#chProduct_code").html("");
 				}
             },error:function () {
 				alert("Error Ajax");

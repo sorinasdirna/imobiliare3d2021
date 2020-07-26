@@ -34,8 +34,8 @@ class CreateProductsTable extends Migration
             $table->tinyInteger('p_status')->default(0);
             $table->string('image')->nullable();
             $table->text('p_description')->nullable();
-            $table->string('p_price')->nullable();
-            $table->string('p_pricemp2')->nullable();
+            $table->float('p_price')->nullable();
+            $table->flaot('p_pricemp2')->nullable();
             $table->string('p_currency');
             $table->string('p_negotiable')->default(0);
             $table->integer('p_rooms')->nullable();
