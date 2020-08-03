@@ -86,7 +86,7 @@ class ProductsController extends Controller
             }
         }
         ProductModel::create($formInput);
-        return redirect()->route('product.create')->with('message','Anuntul a fost creat cu succes');
+        return redirect()->route('product.index')->with('message','Anuntul a fost creat cu succes');
     }
 
     /**

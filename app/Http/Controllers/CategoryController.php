@@ -145,7 +145,9 @@ class CategoryController extends Controller
         $delete=CategoryModel::findOrFail($id);
         $image_medium=public_path().'/categories/'.$delete->image;
         if($delete->delete()){
-            unlink($image_medium);
+            if(!empty($delete->image)) {
+                unlink($image_medium);
+            }
         }
         return redirect()->route('category.index')->with('message','Categoria a fost stearsa cu sucess');
     }
@@ -157,7 +159,9 @@ class CategoryController extends Controller
             $delete_image->image='';
             $delete_image->save();
             ////// delete image ///
-            unlink($image_medium);
+            if(file_exists($image_medium)) {
+                unlink($image_medium);
+            }
         }
         return back();
     }

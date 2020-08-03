@@ -5,9 +5,7 @@ namespace App\Http\Controllers;
 use App\CategoryModel;
 use App\ImageGalleryModel;
 use App\ProductModel;
-use App\Mail\ContactFormMail;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
@@ -60,10 +58,10 @@ class PagesController extends Controller
         return view('detalii',compact('product','images','menu_active'));
     }
 
-    public function contact() {
+    /*public function contact() {
         $menu_active=3;
         return view('contact',compact('menu_active'));
-    }
+    }*/
 
     public function despre() {
         $menu_active=4;

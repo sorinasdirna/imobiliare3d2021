@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>{{config('app.name', 'Imobiliare 3D')}}</title>
 	<!-- favicon -->
 	<link rel="icon" type="image/svg" sizes="18x18" href="/favicon.ico"> 
@@ -127,11 +128,12 @@
 		
 		document.getElementById("closeCookie").addEventListener("click", function(){
 			setCookie('imobiliare3d','GDPRaccepted',7);
+			document.getElementById('cookies').classList.add('js--hidden');
 		});
 		var cookie = getCookie('imobiliare3d');
 		if (cookie) {
 		    document.getElementById('cookies').classList.add('js--hidden');
-		}
+		} 
 
 	</script>
 

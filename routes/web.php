@@ -16,7 +16,12 @@ Route::get('/anunturi', 'PagesController@anunturi')->name('anunturi');
 
 Route::get('/detalii/{id}', 'PagesController@detalii');
 Route::get('/categorii/{id}', 'PagesController@categorii');
-Route::get('/contact', 'PagesController@contact');
+
+
+Route::get('/contact', 'ContactFormController@create');
+Route::post('/contact', 'ContactFormController@store');
+
+
 Route::get('/despre', 'PagesController@despre');
 Route::get('/politica-de-confidentialitate', 'PagesController@politicaDeConfidentialitate');
 Route::get('/politica-de-cookies', 'PagesController@politicaDeCookies');

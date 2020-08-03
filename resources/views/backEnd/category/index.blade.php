@@ -13,42 +13,44 @@
                 <h5>Categorii</h5>
             </div>
             <div class="widget-content nopadding">
-                <table class="table table-bordered data-table">
-                    <thead>
-                    <tr>
-                        <th>Nume categorie</th>
-                        <th>Imagine</th>
-                        <th>Parinte categorie</th>
-                        <th>Data creare</th>
-                        <th>Data ultima editare</th>
-                        <th>Status</th>
-                        <th>Actiuni</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($categories as $category)
-                            <?php
-                                $parent_cates = DB::table('categories')->select('name')->where('id',$category->parent_id)->get();
-                            ?>
-                            <tr class="gradeC">
-                                <td>{{$category->name}}</td>
-                                <td><img src="{{url('categories',$category->image)}}" alt="" width="50"></td>
-                                <td>
-                                    @foreach($parent_cates as $parent_cate)
-                                        {{$parent_cate->name}}
-                                    @endforeach
-                                </td>
-                                <td>{{$category->created_at->diffForHumans()}}</td>
-                                <td>{{$category->updated_at->diffForHumans()}}</td>
-                                <td>{{($category->status==0)?' Inactiva':'Activa'}}</td>
-                                <td>
-                                    <a href="{{route('category.edit',$category->id)}}" class="btn btn-primary btn-mini">Editeaza</a>
-                                    <a href="javascript:" rel="{{$category->id}}" rel1="delete-category" class="btn btn-danger btn-mini deleteRecord">Sterge</a>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                <div class="table-wrap">
+                  <table class="table table-bordered data-table">
+                      <thead>
+                      <tr>
+                          <th>Nume categorie</th>
+                          <th>Imagine</th>
+                          <th>Parinte categorie</th>
+                          <th>Data creare</th>
+                          <th>Data ultima editare</th>
+                          <th>Status</th>
+                          <th>Actiuni</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                          @foreach($categories as $category)
+                              <?php
+                                  $parent_cates = DB::table('categories')->select('name')->where('id',$category->parent_id)->get();
+                              ?>
+                              <tr class="gradeC">
+                                  <td>{{$category->name}}</td>
+                                  <td><img src="{{url('categories',$category->image)}}" alt="" width="50"></td>
+                                  <td>
+                                      @foreach($parent_cates as $parent_cate)
+                                          {{$parent_cate->name}}
+                                      @endforeach
+                                  </td>
+                                  <td>{{$category->created_at->diffForHumans()}}</td>
+                                  <td>{{$category->updated_at->diffForHumans()}}</td>
+                                  <td>{{($category->status==0)?' Inactiva':'Activa'}}</td>
+                                  <td>
+                                      <a href="{{route('category.edit',$category->id)}}" class="btn btn-primary btn-mini">Editeaza</a>
+                                      <a href="javascript:" rel="{{$category->id}}" rel1="delete-category" class="btn btn-danger btn-mini deleteRecord">Sterge</a>
+                                  </td>
+                              </tr>
+                          @endforeach
+                      </tbody>
+                  </table>
+                </div>  
             </div>
         </div>
     </div>
