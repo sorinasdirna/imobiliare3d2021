@@ -18,9 +18,9 @@ class ContactFormController extends Controller
     public function store() {
         $menu_active = 3;
         $data = request()->validate([
-            'name' => 'required',
+            'nume' => 'required',
             'email' => 'required|email',
-            'message' => 'required'
+            'mesaj' => 'required'
         ]);
 
         $message_success = 'Mesajul a fost trimis. Va vom contacta in cel mai scurt timp posibil.';

@@ -53,7 +53,38 @@
 				$('.panel--header').toggleClass('js--mobile');
 			});
 			// add class on scroll
-			$(window).scroll(function() {    
+			//Adding class to fixed header after scroll 
+            var newScrollTop = 0;
+            var lastScrollTop;
+            var header = document.getElementsByClassName('panel--header');
+            var add_class_on_scroll = function () { header.classList.add('js--sticky'); };
+            var remove_class_on_scroll = function () { header.classList.add('js--non-sticky'); };
+            // Header scroll - makes sticky on croll up
+            if (header) {
+                var body = document.body;
+                var scrollUp = 'js--scroll-up';
+                var scrollDown = 'js--scroll-down';
+                var lastScroll = 0;
+
+                window.addEventListener('scroll', function () {
+                    var currentScroll = window.pageYOffset;
+                    if (currentScroll == 0) {
+                        body.classList.remove(scrollUp);
+                        return;
+                    }
+                    if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+                        // down
+                        body.classList.remove(scrollUp);
+                        body.classList.add(scrollDown);
+                    } else if (currentScroll < lastScroll && body.classList.contains(scrollDown)) {
+                        // up
+                        body.classList.remove(scrollDown);
+                        body.classList.add(scrollUp);
+                    }
+                    lastScroll = currentScroll;
+                });
+            }
+			/*$(window).scroll(function() {    
 				var scroll = $(window).scrollTop();
 
 				if (scroll >= 50) {
@@ -61,7 +92,7 @@
 				} else {
 					$(".panel--header").removeClass("js--sticky");
 				}
-			});
+			});*/
 			// banner slider
 			$('.slider--hero').slick({
 				slidesToShow: 1,

@@ -17,30 +17,34 @@
 					<h2 class="title text-center">{{$category->name}}</h2>
 					<div class="grid">
 						<div class="grid_col grid_col--3-of-4 grid_col--md-1-of-1">
-							@foreach($products as $product)
-		  						@if($product->p_status==1)
-			  						@if($product->category->status==1)
-										<div class="property">
-											<div class="property_wrap">
-												<div class="property_left">
-													<div class="property_image" style="background-image: url({{url('products',$product->image)}})"></div>
-													<div class="property_type">{{($product->p_type=='rent')?'De inchiriat':'De vanzare'}}</div>
-													<div class="property_price">{{$product->p_price}} {{$product->p_currency}}</div>
-												</div>
-												<div class="property_right">
-													<div class="property_category">{{$product->category->name}}</div>
-													<div class="property_title">{{$product->p_name}}</div>
-													<div class="property_surface">Suprafata totala: {{$product->p_totalsurface}}mp<sup>2</sup></div>
-													<div class="property_location"><i class="fa fa-map-marker"></i> {{$product->p_address}}</div>
-													<div class="property_more">
-														<a href="{{ url('detalii', [$product->id]) }}" class="button">Detalii</a>
+							@if($products->isEmpty())
+								<p>Nu sunt rezultate.</p>
+							@else
+								@foreach($products as $product)
+			  						@if($product->p_status==1)
+				  						@if($product->category->status==1)
+											<div class="property">
+												<div class="property_wrap">
+													<div class="property_left">
+														<div class="property_image" style="background-image: url({{url('products',$product->image)}})"></div>
+														<div class="property_type">{{($product->p_type=='rent')?'De inchiriat':'De vanzare'}}</div>
+														<div class="property_price">{{$product->p_price}} {{$product->p_currency}}</div>
+													</div>
+													<div class="property_right">
+														<div class="property_category">{{$product->category->name}}</div>
+														<div class="property_title">{{$product->p_name}}</div>
+														<div class="property_surface">Suprafata totala: {{$product->p_totalsurface}}mp<sup>2</sup></div>
+														<div class="property_location"><i class="fa fa-map-marker"></i> {{$product->p_address}}</div>
+														<div class="property_more">
+															<a href="{{ url('detalii', [$product->id]) }}" class="button">Detalii</a>
+														</div>
 													</div>
 												</div>
 											</div>
-										</div>
+										@endif
 									@endif
-								@endif
-							@endforeach
+								@endforeach
+							@endif
 						</div>
 						<div class="categories-accordion grid_col grid_col--1-of-4 grid_col--md-1-of-1">
 						    <div class="accordion">
