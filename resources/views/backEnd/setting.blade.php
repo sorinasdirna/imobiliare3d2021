@@ -6,7 +6,7 @@
         <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Mergi la prima pagina" class="tip-bottom"><i class="icon-home"></i> Acasa</a> <a href="#" class="current">Setari</a> </div>
     </div>
     <!--End-breadcrumbs-->
-    <div class="container-fluid">
+    <div class="container-fluid container-form">
         <div class="row-fluid">
             <div class="span12">
                 <div class="widget-box">
@@ -23,20 +23,20 @@
                             <div class="control-group">
                                 <label class="control-label">Parola curenta</label>
                                 <div class="controls">
-                                    <input type="password" name="pwd_current" id="pwd_current" />
-                                    &nbsp;<span id="chkPwd"></span>
+                                    <input type="password" name="pwd_current" id="pwd_current" class="form-control"/>
+                                    &nbsp;<span id="chkPwd" class="form-control"></span>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Parola noua</label>
                                 <div class="controls">
-                                    <input type="password" name="pwd_new" id="pwd_new" />
+                                    <input type="password" name="pwd_new" id="pwd_new" class="form-control"/>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Confirma parola noua</label>
                                 <div class="controls">
-                                    <input type="password" name="pwdnew_confirm" id="pwdnew_confirm" />
+                                    <input type="password" name="pwdnew_confirm" id="pwdnew_confirm" class="form-control"/>
                                 </div>
                             </div>
                             <div class="form-actions">

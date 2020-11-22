@@ -407,7 +407,7 @@ div.radio {
 
 /* Uploader */
 div.uploader {
-  width: 190px;
+  width: 300px;
   cursor: pointer;
 }
 
@@ -422,13 +422,13 @@ div.uploader span.action {
 
 div.uploader span.filename {
   color: #777;
-  width: 82px;
+  width: 213px;
   border-right: solid 1px #bbb;
   font-size: 11px;
 }
 
 div.uploader input {
-  width: 190px;
+  width: 85px;
 }
 
 div.uploader.disabled span.action {

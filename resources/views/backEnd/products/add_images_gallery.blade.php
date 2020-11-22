@@ -2,7 +2,7 @@
 @section('title','Add Images Gallery')
 @section('content')
     <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Mergi la prima pagina" class="tip-bottom"><i class="icon-home"></i> Acasa</a> <a href="{{route('product.index')}}">Anunturi</a> <a href="#" class="current">Adauga Imagini Galerie</a> </div>
-    <div class="container-fluid">
+    <div class="container-fluid container-form">
         @if(Session::has('message'))
             <div class="alert alert-success text-center" role="alert">
                 <strong>Well done! &nbsp;</strong>{{Session::get('message')}}
@@ -27,7 +27,7 @@
                                 <form action="{{route('image-gallery.store')}}" method="post" role="form" enctype="multipart/form-data">
                                     <legend>Poti adauga multiple imagini</legend>
                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
-                                    <div class="form-group">
+                                    <div class="form-group form-gallery">
                                         <input type="hidden" name="products_id" value="{{$product->id}}">
                                         <input type="file" name="image[]" id="id_imageGallery" class="form-control" multiple="multiple" required>
                                         <span class="text-danger">{{$errors->first('image')}}</span>

@@ -60,21 +60,21 @@
 					<div class="text-center slider-container">
 						<div class="slider-item">
 							<div class="item">
-								<img src="{{ asset('img/svg/value1.svg') }}" alt="icon 1">
+								<img src="{{ asset('img/icons/value3.png') }}" alt="icon 1">
 								<h4>Profesionalism</h4>
 								<p>Oferim cele mai inalte standarde etice, respectam angajamentele si promisiunile noastre.</p>
 							</div>
 						</div>
 						<div class="slider-item">
 							<div class="item">
-								<img src="{{ asset('img/svg/value1.svg') }}" alt="icon 1">
+								<img src="{{ asset('img/icons/value2.png') }}" alt="icon 1">
 								<h4>Calitate</h4>
 								<p>Ne propunem sa depasim asteptarile in tot ceea ce facem.</p>
 							</div>
 						</div>
 						<div class="slider-item">
 							<div class="item">
-								<img src="{{ asset('img/svg/value1.svg') }}" alt="icon 1">
+								<img src="{{ asset('img/icons/value1.png') }}" alt="icon 1">
 								<h4>Integritate</h4>
 								<p>Ne concentram pe o comunicare onesta, oferim oportunitati si stabilitate pe termen lung in care increderea este primara.</p>
 							</div>
@@ -148,7 +148,7 @@
 				<div class="video-text dark text-center">
 					<div class="wrap">
 						<h2 class="title">Despre noi</h2>
-						<p>Anim et cupidatat in velit occaecat aute quis quis in pariatur laborum quis ut consectetur.</p>
+						<p>Vizitati pagina de Contact pentru mai multe informatii.</p>
 						<a class="button button--dark" href="{{ url('contact') }}">Contacteaza-ne</a>
 					</div>
 				</div>

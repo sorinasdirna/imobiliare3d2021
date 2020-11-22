@@ -1,3 +1,13 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 * {
     outline: none !important;
     -moz-outline: none !important;
@@ -1985,10 +1995,12 @@ form {
         left: 0px;
         z-index: 999;
         display: none;
-        position: absolute;
+        position: static;
         width: 100%;
         min-width: 100%;
         border-radius: none;
+        background: transparent !important;
+        padding-left: 30px;
     }
 
     #sidebar>ul li ul li {
@@ -2001,7 +2013,7 @@ form {
     #sidebar>ul li ul li a {
         display: block;
         padding: 5px 10px;
-        color: #fff;
+        color: #fff !important;
         text-decoration: none;
         font-weight: bold;
     }
@@ -2045,13 +2057,9 @@ form {
         overflow: hidden;
     }
 
-    .form-horizontal .control-label {
-        padding-left: 30px;
-    }
-
     .form-horizontal .controls {
         margin-left: 0;
-        padding: 10px 30px;
+        padding: 0;
     }
 
     .form-actions {
@@ -2266,4 +2274,66 @@ form {
 .table-wrap {
     overflow-x: auto;
     background: #efefef;
+}
+
+/**/
+
+.container-form .select2-container {
+    width: 100% !important;
+    max-width: 600px;
+}
+
+.container-form .form-control {
+    width: 100% !important;
+    max-width: 600px;
+    padding: 12px;
+}
+
+.container-form textarea,
+.container-form .wysihtml5-sandbox {
+    width: 100% !important;
+    max-width: 100%;
+}
+
+.container-form .input-append .add-on, 
+.container-form .input-prepend .add-on {
+    height: 26px;
+}
+
+#map {
+    height: 400px;
+}
+
+.container-list .btn {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 480px) {
+    .control-check .control-label {
+        display: inline-block;
+        width: auto;
+        min-width: auto;
+    }
+    .control-check .controls {
+        display: inline-block;
+    }
+    .container-form .control-group {
+        padding: 0 10px;
+    }
+    .container-form input[type="submit"] {
+        margin-bottom: 10px;
+    }
+    div.uploader {
+        width: 242px;
+    }
+    div.uploader span.filename {
+        width: 155px;
+    }
+    .form-gallery .btn-success {
+        display: block;
+        margin-top: 10px;
+    }
+    #user-nav {
+       top: 10px; 
+    }
 }

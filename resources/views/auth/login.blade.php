@@ -42,11 +42,11 @@
             </div>
         </div>
         <div class="form-actions">
-            <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">Lost password?</a></span>
+            <!-- <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">Lost password?</a></span> -->
             <span class="pull-right"><button type="submit" class="btn btn-success">Login</button></span>
         </div>
     </form>
-    <form id="recoverform" action="#" class="form-vertical">
+    <!-- <form id="recoverform" action="#" class="form-vertical">
         <p class="normal_text">Enter your e-mail address below and we will send you instructions how to recover a password.</p>
 
         <div class="controls">
@@ -59,7 +59,7 @@
             <span class="pull-left"><a href="#" class="flip-link btn btn-success" id="to-login">&laquo; Back to login</a></span>
             <span class="pull-right"><a class="btn btn-info">Recover</a></span>
         </div>
-    </form>
+    </form> -->
 </div>
 
 <script src="{{asset('js/jquery.min.js')}}"></script>

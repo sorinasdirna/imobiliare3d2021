@@ -2,7 +2,7 @@
 @section('title','Edit Category')
 @section('content')
     <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Mergi la prima pagina" class="tip-bottom"><i class="icon-home"></i> Acasa</a> <a href="{{route('category.index')}}">Categorii</a> <a href="#" class="current">Editeaza categorie</a> </div>
-    <div class="container-fluid">
+    <div class="container-fluid container-form">
         <div class="row-fluid">
             <div class="span12">
                 <div class="widget-box">
@@ -22,7 +22,7 @@
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Nivel :</label>
-                                <div class="controls" style="width: 245px;">
+                                <div class="controls">
                                     <select name="parent_id" id="parent_id">
                                         {{--@foreach($cate_levels as $key=>$value)
                                             <option value="{{$key}}" {{($edit_category->parent_id==$key)?' selected':''}}>{{$value}}</option>
@@ -50,7 +50,7 @@
                                     <textarea name="description" id="description" rows="3">{{$edit_category->description}}</textarea>
                                 </div>
                             </div>
-                            <div class="control-group">
+                            <div class="control-check control-group">
                                 <label class="control-label">Activa :</label>
                                 <div class="controls">
                                     <input type="checkbox" name="status" id="status" value="1" {{($edit_category->status==0)?'':'checked'}}>

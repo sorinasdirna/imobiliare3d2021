@@ -14,12 +14,15 @@
 Route::get('/', 'PagesController@index');
 Route::get('/anunturi', 'PagesController@anunturi')->name('anunturi');
 
+//Route::get('/categorii', 'PagesController@categorii');
+
 Route::get('/detalii/{id}', 'PagesController@detalii');
 Route::get('/categorii/{id}', 'PagesController@categorii');
 
 
 Route::get('/contact', 'ContactFormController@create');
 Route::post('/contact', 'ContactFormController@store');
+
 
 
 Route::get('/despre', 'PagesController@despre');

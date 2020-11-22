@@ -2,7 +2,7 @@
 @section('title','List Products')
 @section('content')
     <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Mergi la prima pagina" class="tip-bottom"><i class="icon-home"></i> Acasa</a> <a href="{{route('product.index')}}" class="current">Anunturi</a></div>
-    <div class="container-fluid">
+    <div class="container-fluid container-list">
         @if(Session::has('message'))
             <div class="alert alert-success text-center" role="alert">
                 <strong>Well done!</strong> {{Session::get('message')}}

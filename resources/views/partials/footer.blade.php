@@ -6,15 +6,15 @@
                     <img src="{{ asset('img/logo.png') }}" alt="Imobiliare 3D Logo">
                 </a>
             </div>
-            <div class="footer-contact grid_col grid_col--1-of-4 grid_col--md-1-of-2">
-                <h4>Contact</h4>
+            <div class="footer-contact grid_col grid_col--2-of-4 grid_col--md-1-of-2">
+                <h4>Date de contact</h4>
                 <ul>
-                    <li><i class="fa fa-map-marker"></i> Adresa</li>
-                    <li><a href="tel:0000-0000-000"><i class="fa fa-phone"></i> 0000 0000 000</a></li>
-                    <li><a href="mailto:test@test.com"><i class="fa fa-envelope"></i> test@test.com</a></li>
+                    <li><i class="fa fa-map-marker"></i> Capitan Velescu Aurel 23, Cosoveni, 207205</li>
+                    <li><a href="tel:0773-946-863"><i class="fa fa-phone"></i> 0773 946 863</a></li>
+                    <li><a href="mailto:sorindinca77@yahoo.it"><i class="fa fa-envelope"></i> sorindinca77@yahoo.it</a></li>
                 </ul>
             </div>
-            <div class="footer-nav grid_col grid_col--1-of-4 grid_col--md-1-of-2">
+            <!-- <div class="footer-nav grid_col grid_col--1-of-4 grid_col--md-1-of-2">
                 <h4>Linkuri Rapide</h4>
                 <nav class="nav nav--footer">    
                     <ul class="level1 grid">
@@ -24,7 +24,7 @@
                         <li class="grid_col grid_col--1-of-1"><a href="{{ url('contact') }}">Contact</a></li>
                     </ul>
                 </nav>
-            </div>
+            </div> -->
             <div class="footer-socials grid_col grid_col--1-of-4 grid_col--md-1-of-2">
                 <h4>Urmareste-ne</h4>
                 <ul>

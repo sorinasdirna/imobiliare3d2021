@@ -58,10 +58,10 @@ class PagesController extends Controller
         return view('detalii',compact('product','images','menu_active'));
     }
 
-    /*public function contact() {
+    public function contact() {
         $menu_active=3;
         return view('contact',compact('menu_active'));
-    }*/
+    }
 
     public function despre() {
         $menu_active=4;
