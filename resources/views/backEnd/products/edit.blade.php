@@ -328,7 +328,7 @@
     <script src="{{asset('js/jquery.toggle.buttons.js')}}"></script>
     <script src="{{asset('js/masked.js')}}"></script>
     <script src="{{asset('js/jquery.uniform.js')}}"></script>
-    <script src="{{asset('js/select2.min.js')}}"></script>
+    <!-- <script src="{{asset('js/select2.min.js')}}"></script> -->
     <script src="{{asset('js/matrix.js')}}"></script>
     <script src="{{asset('js/matrix.form_common.js')}}"></script>
     <script src="{{asset('js/wysihtml5-0.3.0.js')}}"></script>

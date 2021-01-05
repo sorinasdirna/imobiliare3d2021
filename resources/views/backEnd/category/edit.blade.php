@@ -16,7 +16,7 @@
                             <div class="control-group{{$errors->has('name')?' has-error':''}}">
                                 <label class="control-label">Nume categorie :</label>
                                 <div class="controls">
-                                    <input type="text" name="name" id="name" value="{{$edit_category->name}}" required>
+                                    <input type="text" name="name" id="name" value="{{$edit_category->name}}" required class="form-control">
                                     <span class="text-danger" style="color: red;">{{$errors->first('name')}}</span>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@
                             <div class="control-group">
                                 <label class="control-label">Descriere :</label>
                                 <div class="controls">
-                                    <textarea name="description" id="description" rows="3">{{$edit_category->description}}</textarea>
+                                    <textarea name="description" id="description" rows="6">{{$edit_category->description}}</textarea>
                                 </div>
                             </div>
                             <div class="control-check control-group">
@@ -90,7 +90,7 @@
     <script src="{{asset('js/jquery.toggle.buttons.js')}}"></script>
     <script src="{{asset('js/masked.js')}}"></script>
     <script src="{{asset('js/jquery.uniform.js')}}"></script>
-    <script src="{{asset('js/select2.min.js')}}"></script>
+    <!-- <script src="{{asset('js/select2.min.js')}}"></script> -->
     <script src="{{asset('js/matrix.js')}}"></script>
     <script src="{{asset('js/matrix.form_common.js')}}"></script>
     <script src="{{asset('js/jquery.peity.min.js')}}"></script>

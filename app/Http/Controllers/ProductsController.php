@@ -171,7 +171,9 @@ class ProductsController extends Controller
         $delete=ProductModel::findOrFail($id);
         $image_large=public_path().'/products/'.$delete->image;
         if($delete->delete()){
-            unlink($image_large);
+            if(!empty($delete->image)) {
+                unlink($image_large);
+            }
         }
         return redirect()->route('product.index')->with('message','Anuntul a fost sters cu succes');
     }

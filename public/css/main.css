@@ -1039,10 +1039,16 @@ textarea.input {
 }
 
 @media only screen and (max-width: 1024px) {
+    .js--scroll-down .panel--header {
+        position: fixed;
+        top: 0;
+    }
     .panel--header {
         box-shadow: 0px 1px 7px -4px #000;
         padding: 5px 20px;
         background: linear-gradient(0deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 100%);
+        position: fixed;
+        top: 0;
     }
     .nav-collapse {
         display: none;
@@ -1256,6 +1262,9 @@ textarea.input {
 }
 
 @media only screen and (max-width: 1024px) {
+    .search.search--home {
+        display: none;
+    }
     .search .form-group {
         flex-wrap: wrap;
     }
@@ -1562,6 +1571,7 @@ textarea.input {
     width: 100%;
     background-position: center;
     background-size: cover;
+    background-color: #0167c6;;
 }
 
 .section--categories .category_bottom {

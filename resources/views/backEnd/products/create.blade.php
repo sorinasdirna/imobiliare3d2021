@@ -317,7 +317,7 @@
     <script src="{{ asset('js/jquery.ui.custom.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/jquery.uniform.js') }}"></script>
-    <script src="{{ asset('js/select2.min.js') }}"></script>
+    <!-- <script src="{{ asset('js/select2.min.js') }}"></script> -->
     <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('js/jquery.validate.js') }}"></script>
     <script src="{{ asset('js/matrix.js') }}"></script>

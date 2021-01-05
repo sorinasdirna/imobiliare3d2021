@@ -9,30 +9,18 @@
             <div class="footer-contact grid_col grid_col--2-of-4 grid_col--md-1-of-2">
                 <h4>Date de contact</h4>
                 <ul>
-                    <li><i class="fa fa-map-marker"></i> Capitan Velescu Aurel 23, Cosoveni, 207205</li>
                     <li><a href="tel:0773-946-863"><i class="fa fa-phone"></i> 0773 946 863</a></li>
                     <li><a href="mailto:sorindinca77@yahoo.it"><i class="fa fa-envelope"></i> sorindinca77@yahoo.it</a></li>
-                </ul>
+                </ul> 
             </div>
-            <!-- <div class="footer-nav grid_col grid_col--1-of-4 grid_col--md-1-of-2">
-                <h4>Linkuri Rapide</h4>
-                <nav class="nav nav--footer">    
-                    <ul class="level1 grid">
-                        <li class="grid_col grid_col--1-of-1"><a href="{{ url('/') }}">Acasa</a></li>
-                        <li class="grid_col grid_col--1-of-1"><a href="{{ url('anunturi?type=rent') }}">Inchirieri</a></li>
-                        <li class="grid_col grid_col--1-of-1"><a href="{{ url('anunturi?type=sale') }}">Vanzari</a></li>
-                        <li class="grid_col grid_col--1-of-1"><a href="{{ url('contact') }}">Contact</a></li>
-                    </ul>
-                </nav>
-            </div> -->
-            <div class="footer-socials grid_col grid_col--1-of-4 grid_col--md-1-of-2">
+            <!-- <div class="footer-socials grid_col grid_col--1-of-4 grid_col--md-1-of-2">
                 <h4>Urmareste-ne</h4>
                 <ul>
                     <li><a href="" target="_blank"><i class="fa fa-facebook"></i> <span class="sr-only">Facebook(opens in new window)</span></a></li>
                     <li><a href="" target="_blank"><i class="fa fa-twitter"></i> <span class="sr-only">Twitter(opens in new window)</span></a></li>
                     <li><a href="" target="_blank"><i class="fa fa-youtube"></i> <span class="sr-only">Youtube(opens in new window)</span></a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

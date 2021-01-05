@@ -148,7 +148,7 @@
 				<div class="video-text dark text-center">
 					<div class="wrap">
 						<h2 class="title">Despre noi</h2>
-						<p>Vizitati pagina de Contact pentru mai multe informatii.</p>
+						<p>Pe măsură ce învățăm să trăim în aceste vremuri oarecum provocatoare, oamenii caută mărci puternice, dovedite și profesioniști cu experiență. Craiovaimobiliare3d.ro este un brand foarte puternic, cu agenți de vânzări foarte buni, cu experiență, care cunosc proprietăți imobiliare și au trăit și au lucrat printr-o serie de cicluri de piață. Puteți avea încredere absolută că echipa noastra are capacitatea de a vă ajuta să navigați prin momente care pot fi mai dificile.</p>
 						<a class="button button--dark" href="{{ url('contact') }}">Contacteaza-ne</a>
 					</div>
 				</div>

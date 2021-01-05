@@ -26,7 +26,7 @@ class ContactFormController extends Controller
         $message_success = 'Mesajul a fost trimis. Va vom contacta in cel mai scurt timp posibil.';
 
         // Send An Email
-        Mail::to('test@test.com')->send(new ContactFormMail($data));
+        Mail::to('sorindinca77@yahoo.it')->send(new ContactFormMail($data));
 
         return back()->with('message_success', $message_success);
 

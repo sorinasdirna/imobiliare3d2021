@@ -58,7 +58,6 @@
 						</div>
 						<div class="grid_col grid_col--1-of-2 grid_col--md-1-of-1 text-right">
 							<ul>
-			                    <li><i class="fa fa-map-marker"></i> Capitan Velescu Aurel 23, Cosoveni, 207205</li>
 			                    <li><a href="tel:0000-0000-000"><i class="fa fa-phone"></i> 0773 946 863</a></li>
 			                    <li><a href="mailto:test@test.com"><i class="fa fa-envelope"></i> sorindinca77@yahoo.it</a></li>
 			                </ul>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/bootstrap-responsive.min.css')}}" />
     <link rel="stylesheet" href="{{asset('css/colorpicker.css')}}" />
     <link rel="stylesheet" href="{{ asset('css/uniform.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/select2.css') }}" />
+    <!-- <link rel="stylesheet" href="{{ asset('css/select2.css') }}" /> -->
     <link rel="stylesheet" href="{{asset('css/fullcalendar.css')}}" />
     <link rel="stylesheet" href="{{asset('css/matrix-style.css')}}" />
     <link rel="stylesheet" href="{{asset('css/matrix-media.css')}}" />

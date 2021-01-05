@@ -42,7 +42,7 @@
                         <div class="control-group">
                             <label class="control-label">Descriere :</label>
                             <div class="controls">
-                                <textarea name="description" id="description" rows="3">{{old('description')}}</textarea>
+                                <textarea name="description" id="description" rows="6">{{old('description')}}</textarea>
                             </div>
                         </div>
                         <div class="control-check control-group{{$errors->has('status')?' has-error':''}}">
@@ -77,7 +77,7 @@
     <script src="{{ asset('js/jquery.ui.custom.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/jquery.uniform.js') }}"></script>
-    <script src="{{ asset('js/select2.min.js') }}"></script>
+    <!-- <script src="{{ asset('js/select2.min.js') }}"></script> -->
     <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('js/jquery.validate.js') }}"></script>
     <script src="{{ asset('js/matrix.js') }}"></script>

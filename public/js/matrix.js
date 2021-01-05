@@ -161,6 +161,20 @@ $(document).ready(function(){
 	$('#lightbox').live('click', function() { 
 		$('#lightbox').hide(200);
 	});
+
+	// select2
+ 	var ele = $('select');
+	// gaurav jain: quick fix for select2 not closing on mobile devices
+	ele.on("select2:close", function () {
+	    setTimeout(function () {
+	        $('.select2-container-active').removeClass('select2-container-active');
+	        $(':focus').blur();
+	    }, 1);
+	});
+	// gaurav jain: quick fix for select2 not opening on mobile devices if with textbox
+	ele.on('select2:open', function () {
+	    $('.select2-search__field').prop('focus', false);
+    });
 	
 });
 

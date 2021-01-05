@@ -2289,10 +2289,11 @@ form {
     padding: 12px;
 }
 
+.container-form select,
 .container-form textarea,
 .container-form .wysihtml5-sandbox {
     width: 100% !important;
-    max-width: 100%;
+    max-width: 600px;
 }
 
 .container-form .input-append .add-on, 
@@ -2306,6 +2307,13 @@ form {
 
 .container-list .btn {
     margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .form-control.pac-target-input {
+        left: 9px !important;
+        top: 50px !important;
+    }
 }
 
 @media (max-width: 480px) {
